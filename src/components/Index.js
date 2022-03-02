@@ -113,10 +113,10 @@ const Index = () => {
               </div>
               <div className={`${styles.first_section_image} `}>
                 <div className={`${styles.nfts_group} `}>
-                  <img src="/nfts/9.png" alt="Skullz9" />
-                  <img src="/nfts/92.png" alt="Skullz92" />
-                  <img src="/nfts/95.png" alt="Skullz95" />
-                  <img src="/nfts/2168.png" alt="Skullz2168" />
+                  <img src="/nfts/1757.png" alt="Skullz9" />
+                  <img src="/nfts/1760.png" alt="Skullz92" />
+                  <img src="/nfts/1780.png" alt="Skullz95" />
+                  <img src="/nfts/1786.png" alt="Skullz2168" />
                 </div>
               </div>
             </div>
