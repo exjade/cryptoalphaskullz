@@ -28,7 +28,7 @@ const Index = () => {
                   </div>
                   {/* TWITTER */}
                   <div className={`${styles.header_image} `}>
-                    <a href="https://twitter.com/StarcatchersNFT" target="_blank" >
+                    <a href="https://twitter.com/StarcatchersNFT" target="_blank" rel="noreferrer" >
                       <img src="/image/twitter.png" alt="twitter" />
                     </a>
                   </div>
@@ -67,7 +67,7 @@ const Index = () => {
                 <h2>BUY AN SKULLZ</h2>
 
               </div>
-              <span  className={`${styles.second_sale}`}  >
+              <span className={`${styles.second_sale}`}  >
                 <p>The Initial sale is now available!. To get your Crypto Alpha Skullz, check out the collection on OpenSea.</p>
               </span>
               <div className={`${styles.second_button} `}>
@@ -81,13 +81,49 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className={`${styles.third_section} `} id="team">
-
+          {/* third_gifs */}
+          <div className={`${styles.divider}`} ></div>
+          <div className={`${styles.third_section} `} >
+            <div className={`${styles.third_section_wrapper} `}>
+              <div className={`${styles.third_text} `}>
+                <h2>The specs</h2>
+                <p>
+                  Each Alpha Skull is unique and programmatically generated from over 130 possible traits, including hats, hairs, clothing, and more. All skullz are dope, but some are rarer than others.
+                </p>
+                <p>
+                  The skullz are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS. Purchasing an skull costs 0.05 ETH.
+                </p>
+              </div>
+              <div className={`${styles.third_gifs} `}>
+                <img src="/image/mystery.gif" alt="gif" />
+              </div>
+            </div>
+          </div >
+          <div className={`${styles.divider}`} ></div>
+          {/* fourth_section */}
+          <div className={`${styles.fourth_section} `}>
+            <div className={`${styles.fourth_section_wrapper} `}>
+              <div className={`${styles.fourth_section_text} `}>
+                <h3>THE TEAM</h3>
+                <p>Alpha Skullz was created by two friends who set out to make some dope Skullz, test our skills, and try to build something.</p>
+                <span><p className={`${styles.fourth_section_textt}`} >Vladimir Romanenko</p> Software Enginner</span>
+                <span><p className={`${styles.fourth_section_textt}`} >Alexandre Bladlenyshka</p> Crypto Entrepreneur</span>
+                <span><p className={`${styles.fourth_section_textt}`} >Liam Alvarez</p> Chief Executive Officer</span>
+                <span><p className={`${styles.fourth_section_textt}`} >Johnnie Bravo</p> Chief Technology Officer</span>
+              </div>
+              <div className={`${styles.first_section_image} `}>
+                <div className={`${styles.nfts_group} `}>
+                  <img src="/nfts/9.png" alt="Skullz9" />
+                  <img src="/nfts/92.png" alt="Skullz92" />
+                  <img src="/nfts/95.png" alt="Skullz95" />
+                  <img src="/nfts/2168.png" alt="Skullz2168" />
+                </div>
+              </div>
+            </div>
           </div>
-
+          {/* footer */}
         </div >
       </div>
-      {/* footer */}
     </>
   )
 }
