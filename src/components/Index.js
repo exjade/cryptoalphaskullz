@@ -39,7 +39,7 @@ const Index = () => {
           {/* Background Image */}
           <div className={`${styles.header_image_container} `}>
             <div className={`${styles.header_back_img} `}>
-              <img src="/image/image.jpg" alt="" />
+              <img src="/image/comedy.jpg" alt="" />
             </div>
           </div>
           {/* sections */}
@@ -61,9 +61,9 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className={`${styles.second_section} `} id="buy">
-            <div className={`${styles.second_section_wrapper} `}>
-              <div className={`${styles.second_text} `}>
+          <div className={`${styles.second_section} `} >
+            <div className={`${styles.second_section_wrapper} `} >
+              <div className={`${styles.second_text} `} id="buy">
                 <h2>BUY AN SKULLZ</h2>
 
               </div>
@@ -101,7 +101,7 @@ const Index = () => {
           </div >
           <div className={`${styles.divider}`} ></div>
           {/* fourth_section */}
-          <div className={`${styles.fourth_section} `}>
+          <div className={`${styles.fourth_section}`} id="team">
             <div className={`${styles.fourth_section_wrapper} `}>
               <div className={`${styles.fourth_section_text} `}>
                 <h3>THE TEAM</h3>
