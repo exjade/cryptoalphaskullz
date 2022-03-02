@@ -102,7 +102,7 @@ const Index = () => {
             )
           }
           <div className={`${styles.header_image_container} `}>
-            <div className={`${styles.header_back_img} `}>
+            <div className={`${styles.header_back_img} `} >
               <img src="/image/comedy.jpg" alt="" />
             </div>
           </div>
