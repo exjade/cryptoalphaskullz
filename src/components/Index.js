@@ -121,8 +121,36 @@ const Index = () => {
               </div>
             </div>
           </div>
+          <div className={`${styles.divider}`} ></div>
           {/* footer */}
+          <footer>
+            <div className={`${styles.footer_container} `}>
+              <div className={`${styles.footer_wrapper} `}>
+                <div className={`${styles.footer_text}`}  >
+                  <p>Coming Soon!</p>
+                </div>
+                <div className={`${styles.footer_logo} `}>
+                    <img src="/image/logo.png" alt="logo" />
+                  </div>
+                <div className={`${styles.footer_copyright}`} >
+                  <div className={`${styles.footer_social} `}>
+                    {/* TWITTER */}
+                    <div className={`${styles.footer_image} `}>
+                      <a href="https://twitter.com/StarcatchersNFT" target="_blank" rel="noreferrer" >
+                        <img src="/image/twitter.png" alt="twitter" />
+                      </a>
+                    </div>
+                    <div className={`${styles.footer_copyright} `}>
+                      <p>© 2021 CryptoAlpha Skullz</p>
+                      <a href="">CASK Terms & Conditions</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
         </div >
+        <div className={`${styles.footer_divider}`} ></div>
       </div>
     </>
   )
