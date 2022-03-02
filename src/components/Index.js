@@ -2,9 +2,11 @@ import { useState } from 'react'
 import styles from '../styles/module/Index.module.css'
 import MenuIcon from '@material-ui/icons/Menu';
 import useMobile from '../hooks/use-mobile'
+import useModal from '../hooks/use-modal'
 
 const Index = () => {
-  const { mobile, setMobile } = useMobile()
+  const { toggleModal, closeModal, open, setOpen } = useModal()
+  const { mobile } = useMobile(setOpen)
   return (
     <>
       <div className={`${styles.main_container}`}  >
@@ -40,7 +42,7 @@ const Index = () => {
                     </div>
                   </div>
                 </div>
-              ) : (
+              ) : open ? (
                 // END
                 <div className={`${styles.mobile_container} `}>
                   <div className={`${styles.mobile_wraper} `}>
@@ -50,17 +52,55 @@ const Index = () => {
                         <img src="/image/logo.png" alt="logo" />
                       </div>
                       {/* TWITTER */}
-                      <div className={`${styles.mobile_menu} `}>
-                        <MenuIcon sx={{ color: "white" }} />
+                      <div className={`${styles.mobile_menu} `} >
+                        <MenuIcon sx={{ color: "white" }}
+                          onClick={() => { closeModal() }}
+                        />
                       </div>
                     </div>
-
                   </div>
                 </div>
               )
+                : (
+                  <div className={`${styles.mobile_container} `}>
+                    <div className={`${styles.mobile_wraper} `}>
+                      {/* Links */}
+                      <div className={`${styles.mobile_links} `}>
+                        <div className={`${styles.mobile_logo} `}>
+                          <img src="/image/logo.png" alt="logo" />
+                        </div>
+                        {/* TWITTER */}
+                        <div className={`${styles.mobile_menu} `} >
+                          <MenuIcon sx={{ color: "white" }}
+                            onClick={() => { toggleModal() }}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )
             }
           </header>
           {/* Background Image */}
+          {
+            open && (
+              <div className={`${styles.modal_container} `}>
+                <div className={`${styles.modal_wrapper} `}>
+                  <div className={`${styles.mobile_ancla} `}>
+                    <a href="#buy">
+                      <p>BUY AN ALPHASKULLZ</p>
+                    </a>
+                    <a href="#welcome">
+                      <p>WELCOME</p>
+                    </a>
+                    <a href="#team">
+                      <p>TEAM</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            )
+          }
           <div className={`${styles.header_image_container} `}>
             <div className={`${styles.header_back_img} `}>
               <img src="/image/comedy.jpg" alt="" />
