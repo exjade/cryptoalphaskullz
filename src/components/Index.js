@@ -1,40 +1,64 @@
-import React from 'react'
+import { useState } from 'react'
 import styles from '../styles/module/Index.module.css'
+import MenuIcon from '@material-ui/icons/Menu';
+import useMobile from '../hooks/use-mobile'
 
 const Index = () => {
+  const { mobile, setMobile } = useMobile()
   return (
     <>
       <div className={`${styles.main_container}`}  >
         <div className={`${styles.main_wrapper} `}>
           {/* Header */}
           <header className={`${styles.header}`}  >
-            <div className={`${styles.container} `}>
-              <div className={`${styles.wraper} `}>
-                {/* Links */}
-                <div className={`${styles.links} `}>
-                  <div className={`${styles.header_logo} `}>
-                    <img src="/image/logo.png" alt="logo" />
-                  </div>
-                  <div className={`${styles.header_ancla} `}>
-                    <a href="#buy">
-                      <p>BUY AN ALPHASKULLZ</p>
-                    </a>
-                    <a href="#welcome">
-                      <p>WELCOME</p>
-                    </a>
-                    <a href="#team">
-                      <p>TEAM</p>
-                    </a>
-                  </div>
-                  {/* TWITTER */}
-                  <div className={`${styles.header_image} `}>
-                    <a href="https://twitter.com/StarcatchersNFT" target="_blank" rel="noreferrer" >
-                      <img src="/image/twitter.png" alt="twitter" />
-                    </a>
+            {
+              mobile ? (
+                <div className={`${styles.container} `}>
+                  <div className={`${styles.wraper} `}>
+                    {/* Links */}
+                    <div className={`${styles.links} `}>
+                      <div className={`${styles.header_logo} `}>
+                        <img src="/image/logo.png" alt="logo" />
+                      </div>
+                      <div className={`${styles.header_ancla} `}>
+                        <a href="#buy">
+                          <p>BUY AN ALPHASKULLZ</p>
+                        </a>
+                        <a href="#welcome">
+                          <p>WELCOME</p>
+                        </a>
+                        <a href="#team">
+                          <p>TEAM</p>
+                        </a>
+                      </div>
+                      {/* TWITTER */}
+                      <div className={`${styles.header_image} `}>
+                        <a href="https://twitter.com/StarcatchersNFT" target="_blank" rel="noreferrer" >
+                          <img src="/image/twitter.png" alt="twitter" />
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              ) : (
+                // END
+                <div className={`${styles.mobile_container} `}>
+                  <div className={`${styles.mobile_wraper} `}>
+                    {/* Links */}
+                    <div className={`${styles.mobile_links} `}>
+                      <div className={`${styles.mobile_logo} `}>
+                        <img src="/image/logo.png" alt="logo" />
+                      </div>
+                      {/* TWITTER */}
+                      <div className={`${styles.mobile_menu} `}>
+                        <MenuIcon sx={{ color: "white" }} />
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              )
+            }
           </header>
           {/* Background Image */}
           <div className={`${styles.header_image_container} `}>
@@ -130,8 +154,8 @@ const Index = () => {
                   <p>Coming Soon!</p>
                 </div>
                 <div className={`${styles.footer_logo} `}>
-                    <img src="/image/logo.png" alt="logo" />
-                  </div>
+                  <img src="/image/logo.png" alt="logo" />
+                </div>
                 <div className={`${styles.footer_copyright}`} >
                   <div className={`${styles.footer_social} `}>
                     {/* TWITTER */}
