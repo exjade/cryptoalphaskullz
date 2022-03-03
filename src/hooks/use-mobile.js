@@ -11,6 +11,7 @@ export default function useMobile(setOpen) {
     useEffect(() => {
         window.addEventListener('resize', updateMedia)
         return () => window.addEventListener('resize', updateMedia)
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return { mobile }

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import styles from '../styles/module/Index.module.css'
 import MenuIcon from '@material-ui/icons/Menu';
 import useMobile from '../hooks/use-mobile'
@@ -206,7 +205,7 @@ const Index = () => {
                     </div>
                     <div className={`${styles.footer_copyright} `}>
                       <p>© 2021 CryptoAlpha Skullz</p>
-                      <a href="">CASK Terms & Conditions</a>
+                      <a href="https://twitter.com/StarcatchersNFT">CASK Terms & Conditions</a>
                     </div>
                   </div>
                 </div>
