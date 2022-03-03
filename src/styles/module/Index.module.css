@@ -887,11 +887,11 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 .contract_wrapper > h2{
-    font-weight: 900;
-    font-size: large;
+    font-weight: 700;
+    font-size: .7rem;
     transition: .3s;
     text-align: center;
     color: white;
