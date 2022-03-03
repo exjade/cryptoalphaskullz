@@ -103,7 +103,7 @@ const Index = () => {
           }
           <div className={`${styles.header_image_container} `}>
             <div className={`${styles.header_back_img} `} >
-              <img src="/image/comedy.jpg" alt="" />
+              <img src="/image/background.png" alt="" />
             </div>
           </div>
           {/* sections */}
