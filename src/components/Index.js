@@ -12,7 +12,7 @@ const Index = () => {
       <div className={`${styles.main_container}`}  >
         <div className={`${styles.main_wrapper} `}>
           {/* Header */}
-          <header className={`${styles.header}`}  >
+          <header className={`${styles.header}`} id="home" >
             {
               mobile ? (
                 <div className={`${styles.container} `}>
@@ -20,7 +20,9 @@ const Index = () => {
                     {/* Links */}
                     <div className={`${styles.links} `}>
                       <div className={`${styles.header_logo} `}>
-                        <img src="/image/logo.png" alt="logo" />
+                        <a href={ROUTES.SKULLZ} >
+                          <img src="/image/logo.png" alt="logo" />
+                        </a>
                       </div>
                       <div className={`${styles.header_ancla} `}>
                         <a href="#buy">
@@ -203,7 +205,9 @@ const Index = () => {
                   <p>Coming Soon!</p>
                 </div>
                 <div className={`${styles.footer_logo} `}>
-                  <img src="/image/logo.png" alt="logo" />
+                  <a href="#home">
+                    <img src="/image/logo.png" alt="logo" />
+                  </a>
                 </div>
                 <div className={`${styles.footer_copyright}`} >
                   <div className={`${styles.footer_social} `}>
