@@ -2,6 +2,7 @@ import styles from '../styles/module/Index.module.css'
 import MenuIcon from '@material-ui/icons/Menu';
 import useMobile from '../hooks/use-mobile'
 import useModal from '../hooks/use-modal'
+import * as ROUTES from '../constants/routes'
 
 const Index = () => {
   const { toggleModal, closeModal, open, setOpen } = useModal()
@@ -34,7 +35,7 @@ const Index = () => {
                       </div>
                       {/* TWITTER */}
                       <div className={`${styles.header_image} `}>
-                        <a href="https://twitter.com/StarcatchersNFT" target="_blank" rel="noreferrer" >
+                        <a href="https://twitter.com/cryptoalphasku1" target="_blank" rel="noreferrer" >
                           <img src="/image/twitter.png" alt="twitter" />
                         </a>
                       </div>
@@ -149,12 +150,12 @@ const Index = () => {
           <div className={`${styles.third_section} `} >
             <div className={`${styles.third_section_wrapper} `}>
               <div className={`${styles.third_text} `}>
-                <h2>The specs</h2>
+                <h2>THE SPECS</h2>
                 <p>
                   Each Alpha Skull is unique and programmatically generated from over 130 possible traits, including hats, hairs, clothing, and more. All skullz are dope, but some are rarer than others.
                 </p>
                 <p>
-                  The skullz are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS. Purchasing an skull costs 0.05 ETH.
+                  The skullz are stored as ERC-721 tokens on the Ethereum blockchain and hosted on IPFS. Purchasing an skull costs 0.09 ETH.
                 </p>
               </div>
               <div className={`${styles.third_gifs} `}>
@@ -184,6 +185,15 @@ const Index = () => {
               </div>
             </div>
           </div>
+          {/* Smart Contract */}
+          <div className={`${styles.contract} `}>
+            <div className={`${styles.contract_wrapper} `}>
+              <h2>VERIFIED SMART CONTRACT ADDRESS:</h2>
+              <a href="https://polygonscan.com/address/0x33ce2e587faea05174b7a823f8869cc08c334571" target="_blank" rel="noreferrer">
+                0x33cE2E587FaEA05174B7A823F8869cc08c334571
+              </a>
+            </div>
+          </div>
           <div className={`${styles.divider}`} ></div>
           {/* footer */}
           <footer>
@@ -199,13 +209,13 @@ const Index = () => {
                   <div className={`${styles.footer_social} `}>
                     {/* TWITTER */}
                     <div className={`${styles.footer_image} `}>
-                      <a href="https://twitter.com/StarcatchersNFT" target="_blank" rel="noreferrer" >
+                      <a href="https://twitter.com/cryptoalphasku1" target="_blank" rel="noreferrer" >
                         <img src="/image/twitter.png" alt="twitter" />
                       </a>
                     </div>
                     <div className={`${styles.footer_copyright} `}>
                       <p>© 2021 CryptoAlpha Skullz</p>
-                      <a href="https://twitter.com/StarcatchersNFT">CASK Terms & Conditions</a>
+                      <a href={ROUTES.TERMS} >CASK Terms & Conditions</a>
                     </div>
                   </div>
                 </div>

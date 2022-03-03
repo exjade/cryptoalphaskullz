@@ -6,6 +6,7 @@ import * as ROUTES from './constants/routes';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const SKULLZ = lazy(() => import('./components/Index'));
+const TERMS = lazy(() => import('./components/terms'));
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path={ROUTES.SKULLZ} element={<SKULLZ />}
             />
+            <Route path={ROUTES.TERMS} element={<TERMS />} />
           </Routes>
         </Suspense>
       </BrowserRouter>
