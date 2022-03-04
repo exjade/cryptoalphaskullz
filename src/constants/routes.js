@@ -1,3 +1,3 @@
 export const SKULLZ = '/';
 export const TERMS = '/terms';
-// export const FOOTER = '/2';
+export const NOT_FOUND = '/Not-Found';

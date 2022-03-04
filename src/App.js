@@ -8,22 +8,23 @@ import ReactGA from 'react-ga';
 
 const SKULLZ = lazy(() => import('./components/Index'));
 const TERMS = lazy(() => import('./components/terms'));
+const NotFound = lazy(() => import('./pages/NotFound.js'));
 
 
 function App() {
-  useEffect(() => { 
+  useEffect(() => {
     ReactGA.initialize('G-8KL9FP56MF');
     ReactGA.pageview(window.location.pathname + window.location.search);
-  } , []);
+  }, []);
   return (
     <>
       <BrowserRouter>
         <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path={ROUTES.SKULLZ} element={<SKULLZ />}
-              />
-              <Route path={ROUTES.TERMS} element={<TERMS />} />
-            </Routes>
+          <Routes>
+            <Route exact path={ROUTES.SKULLZ} element={<SKULLZ />} />
+            <Route exact path={ROUTES.TERMS} element={<TERMS />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
         </Suspense>
       </BrowserRouter>
     </>

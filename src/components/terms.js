@@ -1,8 +1,9 @@
+import { useEffect } from 'react'
 import styles from '../styles/module/terms.module.css'
 import Header from './header'
 import { motion } from 'framer-motion'
-
 const Terms = () => {
+  useEffect(() => {document.title = "CASK - Terms & Conditions"}, []); //eslint-disable-line
   return (
     <>
       <Header />
