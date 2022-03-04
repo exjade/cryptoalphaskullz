@@ -4,6 +4,7 @@ import useMobile from '../hooks/use-mobile'
 import useModal from '../hooks/use-modal'
 import * as ROUTES from '../constants/routes'
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom'
 
 const Index = () => {
   const { toggleModal, closeModal, open, setOpen } = useModal()
@@ -282,7 +283,10 @@ const Index = () => {
                     </div>
                     <div className={`${styles.footer_copyright} `}>
                       <p>© 2021 CryptoAlpha Skullz</p>
-                      <a href={ROUTES.TERMS} >CASK Terms & Conditions</a>
+                      {/* <a href={ROUTES.TERMS} >CASK Terms & Conditions</a> */}
+                      <Link to={ROUTES.TERMS}>
+                        <p>CASK Terms & Conditions</p>
+                      </Link>
                     </div>
                   </div>
                 </div>
