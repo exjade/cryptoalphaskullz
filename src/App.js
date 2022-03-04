@@ -3,7 +3,7 @@ import React, { lazy, Suspense, useEffect } from 'react'
 import './styles/App.css';
 // Components
 import * as ROUTES from './constants/routes';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 const SKULLZ = lazy(() => import('./components/Index'));
@@ -18,7 +18,7 @@ function App() {
   }, []);
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route exact path={ROUTES.SKULLZ} element={<SKULLZ />} />
@@ -26,7 +26,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
