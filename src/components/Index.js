@@ -138,7 +138,7 @@ const Index = () => {
               <div className={`${styles.section_text} `}>
                 <h1>WELCOME TO THE CRYPTO ALPHA SKULLZ CLUB</h1>
                 <p>
-                  CryptoAlpha Skullz is a collection of 3,000 Skullz NFTs—unique digital collectibles living on the Ethereum blockchain. Your Skullz doubles as your CryptoAlpha investment, and grants access to members-only benefits, Future areas and perks can be unlocked by the community through roadmap activation.
+                  CryptoAlpha Skullz is a collection of 100 Skullz NFTs—unique digital collectibles living on the Ethereum blockchain. Your Skullz doubles as your CryptoAlpha investment, and grants access to members-only benefits, Future areas and perks can be unlocked by the community through roadmap activation.
                 </p>
               </div>
               <div className={`${styles.first_section_image} `}>
