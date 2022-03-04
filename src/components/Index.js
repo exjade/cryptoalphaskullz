@@ -3,6 +3,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import useMobile from '../hooks/use-mobile'
 import useModal from '../hooks/use-modal'
 import * as ROUTES from '../constants/routes'
+import { motion } from "framer-motion"
 
 const Index = () => {
   const { toggleModal, closeModal, open, setOpen } = useModal()
@@ -12,7 +13,13 @@ const Index = () => {
       <div className={`${styles.main_container}`}  >
         <div className={`${styles.main_wrapper} `}>
           {/* Header */}
-          <header className={`${styles.header}`} id="home" >
+          <motion.header
+            className={`${styles.header}`}
+            id="home"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             {
               mobile ? (
                 <div className={`${styles.container} `}>
@@ -21,7 +28,11 @@ const Index = () => {
                     <div className={`${styles.links} `}>
                       <div className={`${styles.header_logo} `}>
                         <a href={ROUTES.SKULLZ} >
-                          <img src="/image/logo.png" alt="logo" />
+                          <img
+                            src="/image/logo.png"
+                            alt="logo"
+                          />
+
                         </a>
                       </div>
                       <div className={`${styles.header_ancla} `}>
@@ -82,7 +93,7 @@ const Index = () => {
                   </div>
                 )
             }
-          </header>
+          </motion.header>
           {/* Background Image */}
           {
             open && (
@@ -105,11 +116,23 @@ const Index = () => {
           }
           <div className={`${styles.header_image_container} `}>
             <div className={`${styles.header_back_img} `} >
-              <img src="/image/background.png" alt="" />
+              <motion.img
+                src="/image/background.png"
+                alt="background"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2 }}
+              />
             </div>
           </div>
           {/* sections */}
-          <div className={`${styles.first_section} `} id="welcome">
+          <motion.div
+            className={`${styles.first_section} `}
+            id="welcome"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+          >
             <div className={`${styles.first_section_wrapper} `}>
               <div className={`${styles.section_text} `}>
                 <h1>WELCOME TO THE CRYPTO ALPHA SKULLZ CLUB</h1>
@@ -126,8 +149,13 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className={`${styles.second_section} `} >
+          </motion.div>
+          <motion.div
+            className={`${styles.second_section} `}
+            animate={{ x: [0, 100, 0], opacity: 1 }}
+            transition={{ duration: 3 }}
+            initial={{ opacity: 0 }}
+          >
             <div className={`${styles.second_section_wrapper} `} >
               <div className={`${styles.second_text} `} id="buy">
                 <h2>BUY AN SKULLZ</h2>
@@ -146,10 +174,20 @@ const Index = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
           {/* third_gifs */}
-          <div className={`${styles.divider}`} ></div>
-          <div className={`${styles.third_section} `} >
+          <motion.div
+            className={`${styles.divider}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+          ></motion.div>
+          <motion.div
+            className={`${styles.third_section} `}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+          >
             <div className={`${styles.third_section_wrapper} `}>
               <div className={`${styles.third_text} `}>
                 <h2>THE SPECS</h2>
@@ -164,10 +202,21 @@ const Index = () => {
                 <img src="/image/mystery.gif" alt="gif" />
               </div>
             </div>
-          </div >
-          <div className={`${styles.divider}`} ></div>
+          </motion.div >
+          <motion.div
+            className={`${styles.divider}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+          ></motion.div>
           {/* fourth_section */}
-          <div className={`${styles.fourth_section}`} id="team">
+          <motion.div
+            className={`${styles.fourth_section}`}
+            id="team"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2.5 }}
+          >
             <div className={`${styles.fourth_section_wrapper} `}>
               <div className={`${styles.fourth_section_text} `}>
                 <h3>THE TEAM</h3>
@@ -186,19 +235,33 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           {/* Smart Contract */}
-          <div className={`${styles.contract} `}>
+          <motion.div
+            className={`${styles.contract} `}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 3 }}
+          >
             <div className={`${styles.contract_wrapper} `}>
               <h2>VERIFIED SMART CONTRACT ADDRESS:</h2>
               <a href="https://polygonscan.com/address/0x33ce2e587faea05174b7a823f8869cc08c334571" target="_blank" rel="noreferrer">
                 0x33cE2E587FaEA05174B7A823F8869cc08c334571
               </a>
             </div>
-          </div>
-          <div className={`${styles.divider}`} ></div>
+          </motion.div>
+          <motion.div
+            className={`${styles.divider}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+          ></motion.div>
           {/* footer */}
-          <footer>
+          <motion.footer
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+          >
             <div className={`${styles.footer_container} `}>
               <div className={`${styles.footer_wrapper} `}>
                 <div className={`${styles.footer_text}`}  >
@@ -225,9 +288,14 @@ const Index = () => {
                 </div>
               </div>
             </div>
-          </footer>
+          </motion.footer>
         </div >
-        <div className={`${styles.footer_divider}`} ></div>
+        <motion.div
+          className={`${styles.footer_divider}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+        ></motion.div>
       </div>
     </>
   )

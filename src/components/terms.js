@@ -1,11 +1,17 @@
 import styles from '../styles/module/terms.module.css'
 import Header from './header'
+import { motion } from 'framer-motion'
 
 const Terms = () => {
   return (
     <>
       <Header />
-      <div className={`${styles.main_container}`} >
+      <motion.div
+        className={`${styles.main_container}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
         <div className={`${styles.wrapper} `}>
           <div className={`${styles.section_one} `}>
             <h1>TERMS & CONDITIONS</h1>
@@ -33,7 +39,7 @@ const Terms = () => {
           </div>
         </div>
         <div className={`${styles.footer_divider} `}></div>
-      </div>
+      </motion.div>
     </>
   )
 }
