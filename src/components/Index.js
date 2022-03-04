@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styles from '../styles/module/Index.module.css'
 import MenuIcon from '@material-ui/icons/Menu';
 import useMobile from '../hooks/use-mobile'
@@ -40,7 +41,7 @@ const Index = () => {
                         <a href="#buy">
                           <p>BUY AN ALPHASKULLZ</p>
                         </a>
-                        <a href="#welcome">
+                        <a href="#welcome" >
                           <p>WELCOME</p>
                         </a>
                         <a href="#team">
