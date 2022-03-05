@@ -27,7 +27,7 @@ const Header = () => {
                                             </a>
                                         </div>
                                         <div className={`${styles.header_ancla} `}>
-                                            <a href="https://opensea.io/collection/cryptoalphaskullz" target="_blank" rel="noreferrer">
+                                            <a href="https://opensea.io/collection/thecryptoalphaskullz" target="_blank" rel="noreferrer">
                                                 <p>BUY AN ALPHASKULLZ</p>
                                             </a>
                                         </div>

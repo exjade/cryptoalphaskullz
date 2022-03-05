@@ -170,7 +170,7 @@ const Index = () => {
                 <button
                   type="button"
                   className={`${styles.button} `}
-                  onClick={() => window.open('https://opensea.io/collection/cryptoalphaskullz', '_blank')}
+                  onClick={() => window.open('https://opensea.io/collection/thecryptoalphaskullz', '_blank')}
                 >
                   BUY AN SKULLZ ON OPENSEA
                 </button>
@@ -283,7 +283,7 @@ const Index = () => {
                       </a>
                     </div>
                     <div className={`${styles.footer_copyright} `}>
-                      <p>© 2021 CryptoAlpha Skullz</p>
+                      <p>© 2021-2022 CryptoAlpha Skullz</p>
                       {/* <a href={ROUTES.TERMS} >CASK Terms & Conditions</a> */}
                       <Link to={ROUTES.TERMS}>
                         <p>CASK Terms & Conditions</p>
