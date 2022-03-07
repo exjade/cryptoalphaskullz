@@ -969,3 +969,30 @@
     width: 190px;
     height: auto;
 }
+
+/* ROADMAP */
+.roadmapcontainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.roadmapwrapper {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.roadmapmaincontainer {
+    
+}
+.roadmapmaincontainer > img {
+    /* width: 870px;
+    height: auto; */
+    min-width: 100%;
+    max-width: 100%;
+}

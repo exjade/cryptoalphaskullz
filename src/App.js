@@ -3,7 +3,7 @@ import React, { lazy, Suspense, useEffect } from 'react'
 import './styles/App.css';
 // Components
 import * as ROUTES from './constants/routes';
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ReactGA from 'react-ga';
 
 const SKULLZ = lazy(() => import('./components/Index'));

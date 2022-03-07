@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import styles from '../styles/module/Index.module.css'
 import MenuIcon from '@material-ui/icons/Menu';
 import useMobile from '../hooks/use-mobile'
@@ -6,10 +5,11 @@ import useModal from '../hooks/use-modal'
 import * as ROUTES from '../constants/routes'
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
+import RoadMap from './roadmap'
 
 const Index = () => {
-  const { toggleModal, closeModal, open, setOpen } = useModal()
-  const { mobile } = useMobile(setOpen)
+  const { toggleModal, closeModal, open } = useModal()
+  const { mobile } = useMobile()
   return (
     <>
       <div className={`${styles.main_container}`}  >
@@ -252,6 +252,19 @@ const Index = () => {
               </a>
             </div>
           </motion.div>
+          <motion.div
+            className={`${styles.divider}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+          ></motion.div>
+          {/* Fiveth section */}
+          <div className={`${styles.roadmapcontainer} `}>
+            <div className={`${styles.roadmapwrapper} `}>
+              <RoadMap />
+            </div>
+          </div>
+
           <motion.div
             className={`${styles.divider}`}
             initial={{ opacity: 0 }}
